@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+	<head>
+		
+		<title>Seiffert's Adventskalender</title>
+		<meta name="description" content="Verschenken Sie einen edlen Gourmet-Adventskalender mit 24 kulinarischen Kostbarkeiten. Sei es an Geschäftspartner oder Ihre Liebsten. Wir liefern Glück zur Weihnachtszeit.">
+		<meta name="keywords" content="Gourmet Adventskalender, Adventskalender für Erwachsene, Adventskalender für Geschäftspartner, exklusiver Adventskalender, edler Adventskalender, Luxus Adventskalender, luxuriöser Adventskalender, Adventskalender mit Stil, Adventskalender für meine Frau, Adventskalender für meinen Mann, edel, luxuriös, repräsentativer Adventskalender, großer Adventskalender, Food Adventskalender, ausgefallener Adventskalender, kulinarischer Adventskalender">
+		<link type="text/css" rel="stylesheet" href="stylesheet.css">
+		<link rel="stylesheet" href="stylesheet.css">
+		<link rel="stylesheet" href="http://releases.flowplayer.org/5.5.1/skin/minimalist.css">
+		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="http://releases.flowplayer.org/5.5.1/flowplayer.min.js"></script>
+		<script src="script.js" type="text/javascript"></script>
+		<script src="menuScript.js" type="text/javascript"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+		<!--For examples-->
+		<meta charset="UTF-8">
+		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		
+		<script>
+  			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  			ga('create', 'UA-69385766-1', 'auto');
+  			ga('send', 'pageview');
+
+		</script>
+
+		<script type="text/javascript">
+			/*! flip - v1.0.16 - 2015-08-09
+* https://github.com/nnattawat/flip
+* Copyright (c) 2015 Nattawat Nonsung; Licensed MIT */
+
+!function(a){var b=function(b,c){b.data("flipped",!0);var e="rotate"+b.data("axis");b.find(b.data("front")).css({transform:e+(b.data("reverse")?"(-180deg)":"(180deg)"),"z-index":"0"}),b.find(b.data("back")).css({transform:e+"(0deg)","z-index":"1"}),b.one(d(),function(){a(this).trigger("flip:done"),void 0!==c&&c.call(this)})},c=function(b,c){b.data("flipped",!1);var e="rotate"+b.data("axis");b.find(b.data("front")).css({transform:e+"(0deg)","z-index":"1"}),b.find(b.data("back")).css({transform:e+(b.data("reverse")?"(180deg)":"(-180deg)"),"z-index":"0"}),b.one(d(),function(){a(this).trigger("flip:done"),void 0!==c&&c.call(this)})},d=function(){var a,b=document.createElement("fakeelement"),c={transition:"transitionend",OTransition:"oTransitionEnd",MozTransition:"transitionend",WebkitTransition:"webkitTransitionEnd"};for(a in c)if(void 0!==b.style[a])return c[a]};a.fn.flip=function(d,f){return"function"==typeof d&&(f=d),this.each(function(){var g=a(this);if(void 0===d||"boolean"!=typeof d&&"string"!=typeof d)if(g.data("initiated"))!d||void 0===d.axis&&void 0===d.reverse||e.call(this,d,function(){g.trigger("flip:change"),void 0!==f&&f.call(this)});else{g.data("initiated",!0);var h=a.extend({axis:"y",reverse:!1,trigger:"click",speed:500,forceHeight:!1,forceWidth:!1,autoSize:!0,front:"auto",back:"auto"},d);"auto"==h.front?h.front=g.find(".front").length>0?".front":"div:first-child":"autostrict"==h.front&&(h.front="div:first-child"),"auto"==h.back?h.back=g.find(".back").length>0?".back":"div:first-child + div":"autostrict"==h.back&&(h.back="div:first-child + div"),g.data("reverse",h.reverse),g.data("axis",h.axis),g.data("front",h.front),g.data("back",h.back);var i="rotate"+("x"==h.axis.toLowerCase()?"x":"y"),j=2*g["outer"+("rotatex"==i?"Height":"Width")]();g.find(g.data("back")).css({transform:i+"("+(h.reverse?"180deg":"-180deg")+")"}),g.css({perspective:j,position:"relative"});var k=h.speed/1e3||.5,l=g.find(h.front).add(h.back,g);if(h.forceHeight?l.outerHeight(g.height()):h.autoSize&&l.css({height:"100%"}),h.forceWidth?l.outerWidth(g.width()):h.autoSize&&l.css({width:"100%"}),l.css({"backface-visibility":"hidden","transform-style":"preserve-3d",position:"absolute","z-index":"1"}),l.find("*").css({"backface-visibility":"hidden"}),g.find(g.data("back")).css({transform:i+"("+(h.reverse?"180deg":"-180deg")+")","z-index":"0"}),(window.chrome||window.Intl&&Intl.v8BreakIterator)&&"CSS"in window&&g.css({"-webkit-transform-style":"preserve-3d"}),setTimeout(function(){l.css({transition:"all "+k+"s ease-out"}),void 0!==f&&f.call(this)},20),"click"==h.trigger.toLowerCase())g.on(a.fn.tap?"tap":"click",function(d){d||(d=window.event),g.find(a(d.target).closest('button, a, input[type="submit"]')).length||(g.data("flipped")?c(g):b(g))});else if("hover"==h.trigger.toLowerCase()){var m=function(){g.unbind("mouseleave",n),b(g),setTimeout(function(){g.bind("mouseleave",n),g.is(":hover")||c(g)},h.speed+150)},n=function(){c(g)};g.mouseenter(m),g.mouseleave(n)}}else"toggle"==d&&(d=!g.data("flipped")),d?b(g,f):c(g,f)}),this};var e=function(b,c){var d=!1;if(void 0!==b.axis&&a(this).data("axis")!=b.axis.toLowerCase()&&(a(this).data("axis",b.axis.toLowerCase()),d=!0),void 0!==b.reverse&&a(this).data("reverse")!=b.reverse&&(a(this).data("reverse",b.reverse),d=!0),d){var e=a(this).find(a(this).data("front")).add(a(this).data("back"),a(this)),f=e.css("transition");e.css({transition:"none"});var g="rotate"+a(this).data("axis");a(this).data("flipped")?a(this).find(a(this).data("front")).css({transform:g+(a(this).data("reverse")?"(-180deg)":"(180deg)"),"z-index":"0"}):a(this).find(a(this).data("back")).css({transform:g+"("+(a(this).data("reverse")?"180deg":"-180deg")+")","z-index":"0"}),setTimeout(function(){e.css({transition:f}),c.call(this)}.bind(this),0)}else setTimeout(c.bind(this),0)}}(jQuery);
+//# sourceMappingURL=jquery.flip.min.js.map
+		</script>
+
+		<script type="text/javascript">
+			$(function(){
+				$(document).ready(function() {
+					$("#card").flip({
+  						trigger: 'manual'
+					});
+
+					$("#infobutton").hover(function() {
+						$("#card").flip(true);
+					});
+
+					$("#infoButtonBack").hover(function() {
+						$("#card").flip(false);
+					});
+				});
+
+			});
+		</script>
+
+	</head>
+	<body>
+		
+		<header>
+			<div class="menu_container">
+				<div id="menuwrapper" class="menuitems">
+					<ul id="menulist">
+						<li><h2 id="menu_home" class='item'>home</h2></li>
+						<li><h2 id="menu_kalender" class='item'>kalender</h2></li>
+						<li><h2 id="menu_anfrage" class='item'>anfrage</h2></li>
+						<li><h2 id="menu_kontakt" class='item'>kontakt</h2></li>
+					</ul>
+				</div>
+				<div id="logo">
+					<img id="logoBildMenu" src="logohead.png" alt="Logo von Seifferts Adventskalender Seiffert's. Der edle kulinarische Adventskalender für Genießer zum Advent. "> 
+				</div>
+			</div>
+		</header>	
+
+		<div id="infobox">
+			<img src="C4.jpg" height="100%" width="auto" id="infoboximage" alt="Die Adventszeit 2015 naht. Und was macht die Wartezeit zum 24.12 erträglich? Richtig. Ein besonderer Adventskalender. Längst hüpfen nicht nur Kinder morgens aus dem Bett, um nachzusehen, was sich hinter dem Türchen verbirgt. Deshalb haben wir den Adventskalender für Erwachsene konzipiert. Wir bieten Ihnen einen hochwertigen und exklusiven Adventskalender, der Delikatessen und Gourmet-Produkte von Manufakturen aus ganz Europa beinhaltet. Sie wählen den Kalender und wir kümmern uns um den Rest: Gestaltung und Inhalt der Päckchen, Versand und kostenlose Lieferung. Quasi All-Inclusive. Verschenken Sie einen edlen und luxuriösen Food-Adventskalender. Sei es an Geschäftspartner oder an Ihre Liebsten. Verschenken Sie Glück zur Weihnachtszeit. Es gibt nichts Schöneres, als jeden Tag neu überrascht zu werden.">
+			<h1 class="title">Seiffert's<h1>
+			<h1 class="slogan">Make someone happy.<h1>
+		</div>
+		
+		<div id="logoAndSlogan">
+			
+			<img src="logonew.png" id="logopic" height="100%" width="auto" alt="Logo von Seifferts Adventskalender Seiffert's. Der all inclusive Adventskalender für Gourmets. Ein fertiger Adventskalender mit 24 Geschenken.">
+			
+			<!--
+			<h2 id="logoartTwo">Seiffert's</h2>
+			<h6 id="Adventskalender">ADVENTSKALENDER</h6>
+			-->
+		</div>
+
+
+
+		<div id="method">
+
+			<div class="eins">
+				<p class="einstext">Der Adventskalender.</p>
+				<p class="einstextzwei">Verschenken Sie einen edlen und exklusiven Adventskalender. Sei es an Geschäftspartner oder Ihre Liebsten.</p>
+			</div>
+
+			<div class="zwei">
+				<p class="zweitext">Der Versand.</p>
+				<p class="zweitextzwei">Wir versenden alle Pakete ab Mitte November. So entfällt für Sie eine lange Lagerung bis zum 1. Dezember und die Überraschung ist perfekt.</p>
+			</div>
+
+			<div class="drei">
+				<p class="dreitext">Die Emotionen.</p>
+				<p class="dreitextdrei">Verschenken Sie Glück zur Weihnachtszeit. Es gibt nichts Schöneres, als jeden Tag neu überrascht zu werden.</p>
+			</div>
+
+		</div>
+
+		<div id="bildwechsel">
+			<script language="javascript" type="text/javascript">
+			var typ = 0;
+			var bild = 0;
+			window.setInterval("bildwechsel()", 1500);
+ 
+			function bildwechsel () {
+ 
+			bilder = new Array( "C8.jpg", "C13.jpg", "C15.jpg", "C6.jpg", "C17.jpg", "C1.jpg");
+ 
+			if (typ == 0) {
+ 		   	document.getElementById("bild" + (bild+1)).src = bilder[bild];
+			} 
+			else {
+    		document.getElementById("bild" + (bild+1)).src = bilder[(bild + 3)];
+			}			
+ 
+			if (bild < 2) {
+   			 bild ++;
+			}
+
+			else {
+   			 bild = 0;
+   			 
+   			if (typ == 0) {
+   			     typ = 1;
+   			} 
+   			
+   			else if (typ == 1) {
+       			 typ = 0;
+    		}
+
+			}
+ 
+			}
+			</script>
+			<img src="C8.jpg" width="33.33%" height="auto" margin="0" id="bild1" alt="Ein Design Adventskalender, der Luxus versprüht. Ein Adventskalender für Erwachsene."/>
+			<img src="C13.jpg" width="33.33%" height="auto"  margin="0" id="bild2" alt="Ein Gourmet Adventskalender, der jeden Wunsch erfüllt. Ein Adventskalender für Genuss-Liebhaber."/>
+			<img src="C6.jpg" width="33.33%" height="auto"  margin="0" id="bild3" alt="Ein Luxus-Adventskalender, der ausgefallen und exklusiv ist. Ein Adventskalender der dekorativ und repräsentativ ist."/>
+		</div>
+
+		<div id="examplestextfield">
+				<img src="Line.png" id="line">
+				<br>
+				<div class="examplestext">Inhalt des Adventskalenders.</div>
+				<div class="examplestextzwei">Schauen Sie sich die im Adventskalender enthaltenen Produkte an.</div>
+			</div>
+
+
+
+		<div id="examples">
+			
+
+			<!-- 
+			Hover or Click in each element to see flip and bounceInLeft Effects.
+			Best view in full preview.
+			 -->
+
+
+<div class="responsive">
+<ul class="content">
+
+	<!-- 1 -->
+	<li>
+		<div class="card-front">
+			<h2><b>1</b></h2>
+			
+		</div>
+		<div class="card-back">
+      	<h6><b>Spicy Chai Latte</b></h6>
+		</div>
+
+		<!-- Content -->
+		<div class="all-content">
+			
+		</div>
+	</li>
+
+	<!-- 2 -->
+	<li>
+		<div class="card-front">
+			<h2><b>2</b></h2>
+		</div>
+		<div class="card-back">
+			<h6><b>Senf-Dill-Sauce</b></h6>
+		</div>
+
+		<!-- Content -->
+		<div class="all-content">
+			
+		</div>
+	</li>
+
+	<!-- 3 -->
+	<li>
+		<div class="card-front">
+			<h2><b>3</b></h2>
+		</div>
+		<div class="card-back">
+			<h6><b>Product name3</b></h6>
+		</div>
+
+		<!-- Content -->
+		<div class="all-content">
+			
+		</div>
+	</li>
+
+
+	<!-- 4 -->
+	<li>
+		<div class="card-front">
+			<h2><b>4</b></h2>
+			
+		</div>
+		<div class="card-back">
+			<h6><b>Product name4</b></h6>
+		</div>
+
+		<!-- Content -->
+		<div class="all-content">
+			
+		</div>
+	</li>
+
+	<!-- 5 -->
+	<li>
+		<div class="card-front">
+			<h2><b>5</b></h2>
+			
+		</div>
+		<div class="card-back">
+			<h6><b>Product name5</b></h6>
+		</div>
+
+		<!-- Content -->
+		<div class="all-content">
+			
+		</div>
+	</li>
+
+	<!-- 6 -->
+	<li>
+		<div class="card-front">
+			<h2><b>6</b></h2>
+		</div>
+		<div class="card-back">
+			<h6><b>Product name6</b></h6>
+		</div>
+
+		<!-- Content -->
+		<div class="all-content">
+		</div>
+	</li>
+
+
+	<!-- 7 -->
+	<li>
+		<div class="card-front">
+			<h2><b>7</b></h2>
+			
+		</div>
+		<div class="card-back">
+			<h6><b>Product name7</b></h6>
+		</div>
+		
+		<!-- Content -->
+		<div class="all-content">
+			
+		</div>
+	</li>
+
+	<!-- 8 -->
+	<li>
+		<div class="card-front">
+			<h2><b>8</b></h2>
+		</div>
+		<div class="card-back">
+			<h6><b>Product name8</b></h6>
+		</div>
+
+		<!-- Content -->
+		<div class="all-content">
+		</div>
+	</li>
+
+	<!-- 9 -->
+	<li>
+		<div class="card-front">
+			<h2><b>9</b></h2>
+		</div>
+		<div class="card-back">
+			<h6><b>Product name9</b></h6>
+		</div>
+
+		<!-- Content -->
+		<div class="all-content">
+		</div>
+	</li>
+
+	<!-- 10 -->
+	<li>
+		<div class="card-front">
+			<h2><b>10</b></h2>
+			
+		</div>
+		<div class="card-back">
+      	<h6><b>Product name10</b></h6>
+		</div>
+
+		<!-- Content -->
+		<div class="all-content">
+			
+		</div>
+	</li>
+
+	<!-- 11 -->
+	<li>
+		<div class="card-front">
+			<h2><b>11</b></h2>
+		</div>
+		<div class="card-back">
+			<h6><b>Product name11</b></h6>
+		</div>
+
+		<!-- Content -->
+		<div class="all-content">
+			
+		</div>
+	</li>
+
+	<!-- 12 -->
+	<li>
+		<div class="card-front">
+			<h2><b>12</b></h2>
+		</div>
+		<div class="card-back">
+			<h6><b>Product name12</b></h6>
+		</div>
+
+		<!-- Content -->
+		<div class="all-content">
+			
+		</div>
+	</li>
+
+	<!-- 13 -->
+	<li>
+		<div class="card-front">
+			<h2><b>13</b></h2>
+			
+		</div>
+		<div class="card-back">
+      	<h6><b>Product name13</b></h6>
+		</div>
+
+		<!-- Content -->
+		<div class="all-content">
+			
+		</div>
+	</li>
+
+	<!-- 14 -->
+	<li>
+		<div class="card-front">
+			<h2><b>14</b></h2>
+		</div>
+		<div class="card-back">
+			<h6><b>Product name14</b></h6>
+		</div>
+
+		<!-- Content -->
+		<div class="all-content">
+			
+		</div>
+	</li>
+
+	<!-- 15 -->
+	<li>
+		<div class="card-front">
+			<h2><b>15</b></h2>
+		</div>
+		<div class="card-back">
+			<h6><b>Product name15</b></h6>
+		</div>
+
+		<!-- Content -->
+		<div class="all-content">
+			
+		</div>
+	</li>
+
+	<!-- 16 -->
+	<li>
+		<div class="card-front">
+			<h2><b>16</b></h2>
+			
+		</div>
+		<div class="card-back">
+      	<h6><b>Product name16</b></h6>
+		</div>
+
+		<!-- Content -->
+		<div class="all-content">
+			
+		</div>
+	</li>
+
+	<!-- 17 -->
+	<li>
+		<div class="card-front">
+			<h2><b>17</b></h2>
+		</div>
+		<div class="card-back">
+			<h6><b>Product name17</b></h6>
+		</div>
+
+		<!-- Content -->
+		<div class="all-content">
+			
+		</div>
+	</li>
+
+	<!-- 18 -->
+	<li>
+		<div class="card-front">
+			<h2><b>18</b></h2>
+		</div>
+		<div class="card-back">
+			<h6><b>Product name18</b></h6>
+		</div>
+
+		<!-- Content -->
+		<div class="all-content">
+			
+		</div>
+	</li>
+
+	<!-- 19 -->
+	<li>
+		<div class="card-front">
+			<h2><b>19</b></h2>
+			
+		</div>
+		<div class="card-back">
+      	<h6><b>Product name19</b></h6>
+		</div>
+
+		<!-- Content -->
+		<div class="all-content">
+			
+		</div>
+	</li>
+
+	<!-- 20 -->
+	<li>
+		<div class="card-front">
+			<h2><b>20</b></h2>
+		</div>
+		<div class="card-back">
+			<h6><b>Product name20</b></h6>
+		</div>
+
+		<!-- Content -->
+		<div class="all-content">
+			
+		</div>
+	</li>
+
+	<!-- 21 -->
+	<li>
+		<div class="card-front">
+			<h2><b>21</b></h2>
+		</div>
+		<div class="card-back">
+			<h6><b>Product name21</b></h6>
+		</div>
+
+		<!-- Content -->
+		<div class="all-content">
+			
+		</div>
+	</li>
+
+	<!-- 22 -->
+	<li>
+		<div class="card-front">
+			<h2><b>22</b></h2>
+			
+		</div>
+		<div class="card-back">
+      	<h6><b>Product name22</b></h6>
+		</div>
+
+		<!-- Content -->
+		<div class="all-content">
+			
+		</div>
+	</li>
+
+
+	<!-- 23 -->
+	<li>
+		<div class="card-front">
+			<h2><b>23</b></h2>
+		</div>
+		<div class="card-back">
+			<h6><b>Product name23</b></h6>
+		</div>
+
+		<!-- Content -->
+		<div class="all-content">
+			
+		</div>
+	</li>
+
+	<!-- 24 -->
+	<li>
+		<div class="card-front">
+			<h2><b>24</b></h2>
+		</div>
+		<div class="card-back">
+			<h6><b>Product name24</b></h6>
+		</div>
+
+		<!-- Content -->
+		<div class="all-content">
+			
+		</div>
+	</li>
+
+</ul>
+</div>
+
+</div>
+
+		<div id="space">
+			<div id="spaceone">
+			<p class="spacetext">Unsere hochwertigen Delikatessen kommen von Gourmet-Manufakturen aus ganz Europa. </p>
+			<img src="Line.png" id="lineone">
+			</div>
+
+			<div id="spacetwo">
+			<p class="spacetexttwo">Anschließend werden sie liebevoll verpackt und  es entstehen 24 Geschenke. </p>
+			<img src="Line.png" id="linetwo">
+			</div>
+
+			<div id="spacethree">
+			<p class="spacetextthree">Mit Vorfreude wird jedes Einzelne geöffnet und bietet jeden Tag ein neues Genuss-Erlebnis. </p>
+			<img src="Line.png" id="linethree">
+			</div>
+		</div>
+		
+
+		<div id="grusskarte">
+
+			<div id="card">
+				<div id="grusskartetextfeld" class="front">
+					<p class="grusskartetexthead">Grusskarte</p>
+					<p class="grusskartetext">Ergänzen Sie Ihr Geschenk mit einer persönlichen Widmung. Der Grußtext wird auf eine hochwertige Karte gedruckt und dem Adventskalender beigelegt.</p>
+					<div id="infobutton">
+						<p class="buttontext">MORE</p>
+					</div>
+				</div>
+				<div id="grusskartetextfeldback" class="back">
+					<div id="infoButtonBack">
+						<p class="buttontextzwei">X</p>
+					</div>
+					<p class="grusskartetextback">Bestellen Sie den Adventskalender in der Variante mit Grußkarte. Im Bestellvorgang befindet sich ein Komentarfeld, in den Sie Ihren individuellen Text eingeben.</p>
+				</div>
+			</div>
+			
+
+			<div id="grusskartebildId">
+			<img  src="kaertschen.jpg" height="auto" width="40%" alt="Fügen Sie zu Ihrem Gourmet-Adventskalender eine Grußkarte mit individuellem Grußtext hinzu. Diese macht Ihren Adventskalender noch kostbarer.">
+			<!--
+			<img class="grusskartebildtwo" src="grusskarte1.jpg">
+			<img class="grusskartebildthree" src="grusskarte1.jpg">
+			-->
+			</div>
+
+		</div>
+
+		<div id="spacesecond">
+		</div>
+
+		<div id="buy">
+
+			<div id="summary">
+			</div>
+
+			<div id="price">
+				<a href="formular.html"><img id="paypalButtonTwo" src="kaufen.png"></a>
+			</div>
+
+			<div id="pricetwo">
+				<a href="formulargrusskarte.html"><img id="paypalButtonTwo" src="kaufen.png"></a>
+			</div>
+
+			<div id="extra">
+			</div>
+		
+		</div>
+
+
+		<div id="contact">
+
+			<div class="contactbox">
+			<p class="contacttext">Seiffert's<br><br></b>Thies-Malte Seiffert<br>Annette Seiffert<br><br></p>
+			<p class="contacttext">info@seifferts.com</p>
+			</div>
+
+			<!--
+			<div class="contactpicbox">
+			</div>
+			-->
+			
+
+		</div>
+		
+		<div id="last">
+			<a href="impressum.html" class="impressumstyle">Impressum</a>
+			<a href="agb.html" class="agbstyle">AGB</a>
+			<!--
+			<a href="faq.html" class="faqstyle">FAQs</a>
+			-->
+			
+			<p class="payText">Bezahlung</p>
+			<img src="paypalnew.png" id="paypic" height="25%" width="auto">
+
+			<p class="versandText">Versand</p>
+			<img src="versand.jpg" id="versandpic" height="15%" width="auto">
+		</div>
+		
+		<!-- Mobile Seite -->
+
+		<script type="text/javascript">
+				if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+
+					window.open("mobile.html","_self")
+				}
+
+</script>
+
+
+
+
+	</body>
+</html>
